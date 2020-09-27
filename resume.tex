@@ -18,6 +18,8 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{longtable}
 \input{glyphtounicode}
 
 
@@ -76,6 +78,7 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+
 \newcommand{\resumeSubheadingInfo}[7]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -98,6 +101,13 @@
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+    
+\newcommand{\resumeProjectHeadingDouble}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 & #3 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -155,6 +165,19 @@
       {BS in Electrical and Computer Engineering}{Sep. 2007 -- July 2012}
   \resumeSubHeadingListEnd
 
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C++, Hive, Spark} \\
+     \textbf{Developer Tools}{: Git, Google Cloud Platform, VS Code, PyCharm, IntelliJ} \\
+     \textbf{Libraries}{: pandas, NumPy, Matplotlib, scikit-learn, igraph, networkx, joblib, requests, SciPy, Keras}
+    }}
+ \end{itemize}
+ 
+ 
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
@@ -174,62 +197,147 @@
       {Carnegie Mellon University}{Pittsburgh, PA}
       \resumeItemListStart
       \resumeItem{{\bf Discovering social circles}: 
-Proposed methods for automatic community detection on social network subgraphs under the {\em social circle analysis} category. The proposed methods combine structural information (graph connectivity) and content information (traits pertaining to each node in the network) to determine communities within social network graphs.}
-        \resumeItem{{\bf Random graph theory}: Proposed novel random graph models that capture the secure connectivity of large-scale, heterogeneous wireless sensor networks. Analyzed the absence of isolated nodes, connectivity, minimum node degree, and $k$-connectivity of the proposed graphs by means of rigorous mathematical proofs and computer simulations.}
+Proposed methods for automatic community detection on social network subgraphs under the {\em social circle analysis} category. The proposed methods combine structural information (graph connectivity) and content information (traits pertaining to each node in the network) to determine communities within social network graphs}
+        \resumeItem{{\bf Random graph theory}: Proposed novel random graph models that capture the secure connectivity of large-scale, heterogeneous wireless sensor networks. Analyzed the absence of isolated nodes, connectivity, minimum node degree, and $k$-connectivity of the proposed graphs by means of rigorous mathematical proofs and computer simulations}
         \resumeItem{{\bf Network science}: Proposed and analyzed mathematical and simulation models that characterize the role of evolutionary adaptations in facilitating the spread of information and infectious diseases in real-world complex networks}
-        \resumeItem{{\bf Internet of Things}: Worked on the design, evaluation, and implementation of novel techniques that aim to i) disentangle and decode large numbers of interfering LP-WAN transmissions at a simple, single-antenna LP-WAN base station, and ii) extend the transmission range of the current LP-WAN sensors.}
+        \resumeItem{{\bf Internet of Things}: Worked on the design, evaluation, and implementation of novel techniques that aim to i) disentangle and decode large numbers of interfering LP-WAN transmissions at a simple, single-antenna LP-WAN base station, and ii) extend the transmission range of the current LP-WAN sensors}
+    \resumeItemListEnd
+    
+    
+    \resumeSubheading
+      {Research Assistant}{Aug. 2015 -- Sep. 2019}
+      {Carnegie Mellon University}{Pittsburgh, PA}
+      \resumeItemListStart
+      \resumeItem{{\bf Discovering social circles}: 
+Proposed methods for automatic community detection on social network subgraphs under the {\em social circle analysis} category. The proposed methods combine structural information (graph connectivity) and content information (traits pertaining to each node in the network) to determine communities within social network graphs}
+        \resumeItem{{\bf Random graph theory}: Proposed novel random graph models that capture the secure connectivity of large-scale, heterogeneous wireless sensor networks. Analyzed the absence of isolated nodes, connectivity, minimum node degree, and $k$-connectivity of the proposed graphs by means of rigorous mathematical proofs and computer simulations}
+        \resumeItem{{\bf Network science}: Proposed and analyzed mathematical and simulation models that characterize the role of evolutionary adaptations in facilitating the spread of information and infectious diseases in real-world complex networks}
+        \resumeItem{{\bf Internet of Things}: Worked on the design, evaluation, and implementation of novel techniques that aim to i) disentangle and decode large numbers of interfering LP-WAN transmissions at a simple, single-antenna LP-WAN base station, and ii) extend the transmission range of the current LP-WAN sensors}
     \resumeItemListEnd
 
 
-    \resumeSubheading
-      {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-      {Southwestern University}{Georgetown, TX}
+\resumeSubheading
+      {Research Assistant}{Aug. 2014 -- May 2015}
+      {University of Arizona}{Tucson, AZ}
       \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Developed a game in Java to test the generated dungeons}
-        \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-        \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-        \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-        \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
-      \resumeItemListEnd
+      \resumeItem{{\bf Physical-layer security}: Conducted research on physical layer security in multi-link wireless networks using artificial noise techniques}
+    \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
-\section{Projects}
+\section{Graduate Courses}
+\setlength{\columnsep}{-2.8cm}
+
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
+          {\textbf{Carnegie Mellon University} (GPA: 4.0)}{Aug. 2015 -- Sep. 2019}
+          \begin{multicols}{2}
           \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
+            \resumeItem{Introduction to Machine Learning (PhD)}
+            \resumeItem{Applied Stochastic Processes}
+            \resumeItem{Estimation and Detection}
+            \resumeItem{Wireless Communications}
+            \resumeItem{Game Theory}
+            \item[\vspace{\fill}]
           \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
+          \end{multicols}
+          
+          
+          \resumeProjectHeading
+          {\textbf{University of Arizona} (GPA: 4.0)}{Aug. 2014 -- May 2015}
+ 		\begin{multicols}{2}          
           \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
+            \resumeItem{Computer System and Network Evaluation}
+            \resumeItem{Advanced Topics in Computer Networks}
+            \resumeItem{Theory of Graphs and Networks}
           \resumeItemListEnd
+          \end{multicols}
+          
+               \resumeProjectHeading
+          {\textbf{Cairo University} (GPA: 4.0)}{Sep. 2012 -- July 2014}
+         \begin{multicols}{2}           
+          \resumeItemListStart
+            \resumeItem{Optimization Methods}
+            \resumeItem{Advanced Mathematics}
+            \resumeItem{Linear/Non-Linear Control Systems}
+          \resumeItemListEnd
+          \end{multicols}
+          
+          
     \resumeSubHeadingListEnd
 
 
+\section{Honors and Awards}
 
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
-    }}
- \end{itemize}
+\resumeItemListStart
+            \resumeItem{Philip and Marsha Dowd Fellowship at \textsc{Carnegie Mellon University}, USA}
+            \resumeItem{CMU Presidential Fellowship at \textsc{Carnegie Mellon University}, USA.}
+            \resumeItem{William J. Happel Endowed Fellowship at \textsc{Carnegie Mellon University}, USA}
+            \resumeItem{Carnegie Institute of Technology {Dean's Fellow} at \textsc{Carnegie Mellon}}
+            \resumeItem{Full tuition Graduate Assistantship at \textsc{University of Arizona}, USA.}
+ \resumeItemListEnd
+
+
+\section{Patents}
+\begin{itemize}
+\item[(P2)] \textbf{R. Eletreby}, D. Zhang, S. Kumar and O. Ya\u{g}an \textit{``Empowering Low-Power Wide Area Networks in Urban Settings”} - patent pending.
+
+\item[(P1)] M. Krunz, B. Akgun, P. Siyari, H. Rahbari, \textbf{R. Eletreby}, and O. Koyluoglu \textit{``Systems and methods for securing wireless communications"} - patent granted by USPTO.
+\end{itemize}
+
+
+
+\section{PUBLICATIONS}
+
+\subsubsection*{\quad \large Technical Reports}
+\begin{itemize}
+\item[(T1)] \textbf{R. Eletreby} and  M. Blanco \textit{``Social Circle Analysis via Content and Structure Augmentation"} - Source code and report are available at: \url{https://github.com/reletreby/structureAug}
+\end{itemize}
+
+\subsubsection*{\quad \large Journal Papers}
+\begin{itemize}
+\item[(J6)] \textbf{R. Eletreby}, Y. Zhuang, K. M. Carley, O. Ya\u{g}an, and H.  Vincent Poor \textit{``The Effects of Evolutionary Adaptations on Spreading Processes in Complex Networks"} - Proceedings of the National Academy of Sciences.
+
+\item[(J5)] \textbf{R. Eletreby} and O. Ya\u{g}an \textit{``Secure Connectivity of Heterogeneous Wireless Sensor Networks Under a Heterogeneous On-Off Channel Model"} - submitted to IEEE Transactions on Information Theory.
+
+\item[(J4)] \textbf{R. Eletreby} and O. Ya\u{g}an \textit{``Connectivity of Inhomogeneous Random K-out Graphs"} - submitted to IEEE Transactions on Information Theory.
+
+\item[(J3)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``$k$-connectivity of Inhomogeneous Random Key Graphs with Unreliable Links"} - published in IEEE Transactions on Information Theory.
+
+\item[(J2)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Connectivity of Wireless Sensor Networks Secured by Heterogeneous Key Predistribution Under an On/Off Channel Model"} - published in IEEE Transactions on Control of Network Systems.
+
+\item[(J1)] \textbf{R.Eletreby}, H.Elsayed and M.Khairy \textit{``Optimal Spectrum Assignment for Cognitive Radio Sensor Networks Under Coverage Constraint"} - published in IET Communications Journal.
+\end{itemize}
+
+
+\subsubsection{\quad \large Conference Papers}
+\begin{itemize}
+\item [(C12)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Connectivity of Inhomogeneous Random $K$-out Graphs"} - IEEE ISIT 2019
+
+\item [(C11)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Connectivity of Wireless Sensor Networks Secured by The Heterogeneous Random Pairwise Key Predistribution Scheme"} - IEEE CDC 2018
+
+\item [(C10)] \textbf{R.Eletreby}, Y.Zhuang and O.Ya\u{g}an \textit{``Evolution of Spreading Processes on Complex Networks"} - Conference on Complex Systems 2018
+
+\item [(C9)] \textbf{R.Eletreby}, Y.Zhuang and O.Ya\u{g}an \textit{``Evolution of Spreading Processes on Complex Networks"} - IEEE ITA 2018 - Invited Abstract
+
+\item [(C8)] \textbf{R.Eletreby}, D.Zhang, S.Kumar and O.Ya\u{g}an \textit{``Empowering Low-Power Wide Area Networks in Urban Settings"} - ACM SIGCOMM 2017
+
+\item [(C7)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Secure and Reliable Connectivity in Heterogeneous Wireless Sensor Networks"} - IEEE ISIT 2017
+
+\item [(C6)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Connectivity of Inhomogeneous Random Key Graphs Intersecting Inhomogeneous Erd\H{o}s-R\'enyi Graphs"} - IEEE ISIT 2017
+
+\item [(C5)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Reliability of Wireless Sensor Networks under a Heterogeneous Key Predistribution Scheme"} - IEEE CDC 2016
+
+\item [(C4)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Performance of the Heterogeneous Key Predistribution Scheme under a Heterogeneous ON-OFF Channel Model"} - Allerton 2016
+
+\item [(C3)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{`` Minimum Node Degree in Inhomogeneous Random Key Graphs With Unreliable Links"} - IEEE ISIT 2016
+
+\item [(C2)] \textbf{R.Eletreby}, H.Rahbari, M.Krunz \textit{``Supporting PHY-layer Security in Multi-link Wireless Networks Using Friendly Jamming"} - IEEE GLOBECOM 2015.
+
+\item [(C1)] \textbf{R.Eletreby}, H.Elsayed and M.Khairy \textit{``CogLEACH: A Spectrum-Aware Clustering Protocol for Cognitive Radio Sensor Networks"} - CROWNCOM 2014.
+\end{itemize}
 
 
 %-------------------------------------------
