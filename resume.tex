@@ -45,7 +45,7 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
+\addtolength{\topmargin}{-0.3in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -70,6 +70,18 @@
   }
 }
 
+\newcommand{\resumeItemNull}[1]{
+  \item[]\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemInfo}[2]{
+  \item[#1]\small{
+    {#2 \vspace{-2pt}}
+  }
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -79,14 +91,12 @@
 }
 
 
-\newcommand{\resumeSubheadingInfo}[7]{
+\newcommand{\resumeSubheadingInfo}[5]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-      \textit{\small#5} & \\
-      \textit{\small#6} & \\
-      \textit{\small#7} & \\
+      \textsc{~#5} & \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -104,12 +114,6 @@
     \end{tabular*}\vspace{-7pt}
 }
     
-\newcommand{\resumeProjectHeadingDouble}[3]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 & #3 \\
-    \end{tabular*}\vspace{-7pt}
-}
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
@@ -118,7 +122,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4.5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -146,8 +150,13 @@
     \resumeSubheadingInfo
       {Carnegie Mellon University}{Pittsburgh, PA}
       {PhD in Electrical and Computer Engineering}{Aug. 2015 -- Sep. 2019}
-      { ~{\bf{Thesis:}} ``Inhomogeneous Models for Random Graphs and Spreading Processes: }{~~~Applications in Wireless Sensor Networks and Social Networks"}
-      { ~{\bf{Adviser:}} Prof. Osman Ya\u{g}an }
+      {Awards:}
+      \resumeItemListStart
+            \resumeItem{Philip and Marsha Dowd Fellowship}
+            \resumeItem{CMU Presidential Fellowship}
+            \resumeItem{William J. Happel Fellowship}
+            \resumeItem{Carnegie Institute of Technology Fellowship}
+ \resumeItemListEnd
       
      \vspace{1mm}
     \resumeSubheading
@@ -166,17 +175,16 @@
   \resumeSubHeadingListEnd
 
 
-%
+%\vspace{0.0001mm}
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, C++, Hive, Spark} \\
+     \textbf{Coding}{: Python, C++, Hive, Spark} \\
      \textbf{Developer Tools}{: Git, Google Cloud Platform, VS Code, PyCharm, IntelliJ} \\
      \textbf{Libraries}{: pandas, NumPy, Matplotlib, scikit-learn, igraph, networkx, joblib, requests, SciPy, Keras}
     }}
  \end{itemize}
- 
  
 %-----------EXPERIENCE-----------
 \section{Experience}
@@ -184,10 +192,10 @@
 
     \resumeSubheading
       {Senior Data Scientist}{October 2019 -- Present}
-      {Walmart}{Hoboken, NJ}
+      {Walmart Inc.}{Hoboken, NJ}
       \resumeItemListStart
-        \resumeItem{{\bf Learning to rank:} Analyzing and processing complex data sets using advanced querying, visualization and analytics tools. Automating data scraping, feature engineering, and feature selection for machine learning models. Full stack design of advanced machine learning models in the context of learning to rank to improve the relevance and conversion of search and browse results}
-        \resumeItem{{\bf Experimentation:} Developing a suite of comprehensive offline testing tools that enable faster development iterations. Running customer facing experiments through interleaving and A/B testing}
+        \resumeItem{{\bf Learning to Rank:} Analyzing and processing complex data sets using advanced querying, visualization and analytics tools. Automating data scraping, feature engineering, and feature selection for machine learning models. Full stack design of advanced machine learning models in the context of learning to rank to improve the relevance and conversion of search and browse results}
+        \resumeItem{{\bf Experimentation:} Developing a suite of comprehensive offline testing tools that enable faster development iterations. Running and analyzing customer facing experiments through interleaving and A/B testing}
       \resumeItemListEnd
       
 
@@ -196,25 +204,13 @@
       {Research Assistant}{Aug. 2015 -- Sep. 2019}
       {Carnegie Mellon University}{Pittsburgh, PA}
       \resumeItemListStart
-      \resumeItem{{\bf Discovering social circles}: 
+      \resumeItem{{\bf Discovering Social Circles}: 
 Proposed methods for automatic community detection on social network subgraphs under the {\em social circle analysis} category. The proposed methods combine structural information (graph connectivity) and content information (traits pertaining to each node in the network) to determine communities within social network graphs}
-        \resumeItem{{\bf Random graph theory}: Proposed novel random graph models that capture the secure connectivity of large-scale, heterogeneous wireless sensor networks. Analyzed the absence of isolated nodes, connectivity, minimum node degree, and $k$-connectivity of the proposed graphs by means of rigorous mathematical proofs and computer simulations}
-        \resumeItem{{\bf Network science}: Proposed and analyzed mathematical and simulation models that characterize the role of evolutionary adaptations in facilitating the spread of information and infectious diseases in real-world complex networks}
+        \resumeItem{{\bf Random Graph Theory}: Proposed novel random graph models that capture the secure connectivity of large-scale, heterogeneous wireless sensor networks. Analyzed the absence of isolated nodes, connectivity, minimum node degree, and $k$-connectivity of the proposed graphs by means of rigorous mathematical proofs and computer simulations}
+        \resumeItem{{\bf Network Science}: Proposed and analyzed mathematical and simulation models that characterize the role of evolutionary adaptations in facilitating the spread of information and infectious diseases in real-world complex networks}
         \resumeItem{{\bf Internet of Things}: Worked on the design, evaluation, and implementation of novel techniques that aim to i) disentangle and decode large numbers of interfering LP-WAN transmissions at a simple, single-antenna LP-WAN base station, and ii) extend the transmission range of the current LP-WAN sensors}
     \resumeItemListEnd
     
-    
-    \resumeSubheading
-      {Research Assistant}{Aug. 2015 -- Sep. 2019}
-      {Carnegie Mellon University}{Pittsburgh, PA}
-      \resumeItemListStart
-      \resumeItem{{\bf Discovering social circles}: 
-Proposed methods for automatic community detection on social network subgraphs under the {\em social circle analysis} category. The proposed methods combine structural information (graph connectivity) and content information (traits pertaining to each node in the network) to determine communities within social network graphs}
-        \resumeItem{{\bf Random graph theory}: Proposed novel random graph models that capture the secure connectivity of large-scale, heterogeneous wireless sensor networks. Analyzed the absence of isolated nodes, connectivity, minimum node degree, and $k$-connectivity of the proposed graphs by means of rigorous mathematical proofs and computer simulations}
-        \resumeItem{{\bf Network science}: Proposed and analyzed mathematical and simulation models that characterize the role of evolutionary adaptations in facilitating the spread of information and infectious diseases in real-world complex networks}
-        \resumeItem{{\bf Internet of Things}: Worked on the design, evaluation, and implementation of novel techniques that aim to i) disentangle and decode large numbers of interfering LP-WAN transmissions at a simple, single-antenna LP-WAN base station, and ii) extend the transmission range of the current LP-WAN sensors}
-    \resumeItemListEnd
-
 
 \resumeSubheading
       {Research Assistant}{Aug. 2014 -- May 2015}
@@ -226,118 +222,105 @@ Proposed methods for automatic community detection on social network subgraphs u
   \resumeSubHeadingListEnd
 
 
-%-----------PROJECTS-----------
+%-----------GRADUATE COURSES-----------
 \section{Graduate Courses}
-\setlength{\columnsep}{-2.8cm}
-
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Carnegie Mellon University} (GPA: 4.0)}{Aug. 2015 -- Sep. 2019}
-          \begin{multicols}{2}
+          {\textbf{Carnegie Mellon University} (GPA: 4.0)}{}
           \resumeItemListStart
-            \resumeItem{Introduction to Machine Learning (PhD)}
-            \resumeItem{Applied Stochastic Processes}
-            \resumeItem{Estimation and Detection}
-            \resumeItem{Wireless Communications}
-            \resumeItem{Game Theory}
-            \item[\vspace{\fill}]
+            \resumeItemNull{Introduction to Machine Learning (PhD), Applied Stochastic Processes, Estimation and Detection, Wireless Communications, Game Theory}
           \resumeItemListEnd
-          \end{multicols}
-          
-          
+                    
           \resumeProjectHeading
-          {\textbf{University of Arizona} (GPA: 4.0)}{Aug. 2014 -- May 2015}
- 		\begin{multicols}{2}          
+          {\textbf{University of Arizona} (GPA: 4.0)}{}
           \resumeItemListStart
-            \resumeItem{Computer System and Network Evaluation}
-            \resumeItem{Advanced Topics in Computer Networks}
-            \resumeItem{Theory of Graphs and Networks}
+            \resumeItemNull{Computer System and Network Evaluation, Advanced Topics in Computer Networks, Theory of Graphs and Networks}
           \resumeItemListEnd
-          \end{multicols}
-          
+                    
                \resumeProjectHeading
-          {\textbf{Cairo University} (GPA: 4.0)}{Sep. 2012 -- July 2014}
-         \begin{multicols}{2}           
+          {\textbf{Cairo University} (GPA: 4.0)}{}
           \resumeItemListStart
-            \resumeItem{Optimization Methods}
-            \resumeItem{Advanced Mathematics}
-            \resumeItem{Linear/Non-Linear Control Systems}
+            \resumeItemNull{Optimization Methods, Advanced Mathematics, Linear/Non-Linear Control Systems}
           \resumeItemListEnd
-          \end{multicols}
           
           
     \resumeSubHeadingListEnd
 
 
-\section{Honors and Awards}
-
-\resumeItemListStart
-            \resumeItem{Philip and Marsha Dowd Fellowship at \textsc{Carnegie Mellon University}, USA}
-            \resumeItem{CMU Presidential Fellowship at \textsc{Carnegie Mellon University}, USA.}
-            \resumeItem{William J. Happel Endowed Fellowship at \textsc{Carnegie Mellon University}, USA}
-            \resumeItem{Carnegie Institute of Technology {Dean's Fellow} at \textsc{Carnegie Mellon}}
-            \resumeItem{Full tuition Graduate Assistantship at \textsc{University of Arizona}, USA.}
- \resumeItemListEnd
-
-
 \section{Patents}
-\begin{itemize}
-\item[(P2)] \textbf{R. Eletreby}, D. Zhang, S. Kumar and O. Ya\u{g}an \textit{``Empowering Low-Power Wide Area Networks in Urban Settings”} - patent pending.
-
-\item[(P1)] M. Krunz, B. Akgun, P. Siyari, H. Rahbari, \textbf{R. Eletreby}, and O. Koyluoglu \textit{``Systems and methods for securing wireless communications"} - patent granted by USPTO.
-\end{itemize}
-
+\resumeItemListStart
+\resumeItemInfo{(P2)}{\textbf{R. Eletreby}, D. Zhang, S. Kumar and O. Ya\u{g}an \textit{``Empowering Low-Power Wide Area Networks in Urban Settings”} - patent pending}
+\resumeItemInfo{(P1)}{M. Krunz, B. Akgun, P. Siyari, H. Rahbari, \textbf{R. Eletreby}, and O. Koyluoglu \textit{``Systems and methods for securing wireless communications"} - patent granted by USPTO}
+\resumeItemListEnd
 
 
-\section{PUBLICATIONS}
+\section{Publications}
 
 \subsubsection*{\quad \large Technical Reports}
-\begin{itemize}
-\item[(T1)] \textbf{R. Eletreby} and  M. Blanco \textit{``Social Circle Analysis via Content and Structure Augmentation"} - Source code and report are available at: \url{https://github.com/reletreby/structureAug}
-\end{itemize}
+\resumeItemListStart
+\resumeItemInfo{(T1)}{\textbf{R. Eletreby} and  M. Blanco \textit{``Social Circle Analysis via Content and Structure Augmentation"} - Source code and report are available at: \url{https://github.com/reletreby/structureAug}}
+\resumeItemListEnd
 
 \subsubsection*{\quad \large Journal Papers}
-\begin{itemize}
-\item[(J6)] \textbf{R. Eletreby}, Y. Zhuang, K. M. Carley, O. Ya\u{g}an, and H.  Vincent Poor \textit{``The Effects of Evolutionary Adaptations on Spreading Processes in Complex Networks"} - Proceedings of the National Academy of Sciences.
 
-\item[(J5)] \textbf{R. Eletreby} and O. Ya\u{g}an \textit{``Secure Connectivity of Heterogeneous Wireless Sensor Networks Under a Heterogeneous On-Off Channel Model"} - submitted to IEEE Transactions on Information Theory.
+\resumeItemListStart
+\resumeItemInfo{(J6)}{\textbf{R. Eletreby}, Y. Zhuang, K. M. Carley, O. Ya\u{g}an, and H.  Vincent Poor \textit{``The Effects of Evolutionary Adaptations on Spreading Processes in Complex Networks"} - Proceedings of the National Academy of Sciences}
 
-\item[(J4)] \textbf{R. Eletreby} and O. Ya\u{g}an \textit{``Connectivity of Inhomogeneous Random K-out Graphs"} - submitted to IEEE Transactions on Information Theory.
-
-\item[(J3)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``$k$-connectivity of Inhomogeneous Random Key Graphs with Unreliable Links"} - published in IEEE Transactions on Information Theory.
-
-\item[(J2)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Connectivity of Wireless Sensor Networks Secured by Heterogeneous Key Predistribution Under an On/Off Channel Model"} - published in IEEE Transactions on Control of Network Systems.
-
-\item[(J1)] \textbf{R.Eletreby}, H.Elsayed and M.Khairy \textit{``Optimal Spectrum Assignment for Cognitive Radio Sensor Networks Under Coverage Constraint"} - published in IET Communications Journal.
-\end{itemize}
+\resumeItemInfo{(J5)}{\textbf{R. Eletreby} and O. Ya\u{g}an \textit{``Secure Connectivity of Heterogeneous Wireless Sensor Networks Under a Heterogeneous On-Off Channel Model"} - submitted to IEEE Transactions on Information Theory}
 
 
-\subsubsection{\quad \large Conference Papers}
-\begin{itemize}
-\item [(C12)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Connectivity of Inhomogeneous Random $K$-out Graphs"} - IEEE ISIT 2019
+\resumeItemInfo{(J4)}{\textbf{R. Eletreby} and O. Ya\u{g}an \textit{``Connectivity of Inhomogeneous Random K-out Graphs"} - submitted to IEEE Transactions on Information Theory}
 
-\item [(C11)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Connectivity of Wireless Sensor Networks Secured by The Heterogeneous Random Pairwise Key Predistribution Scheme"} - IEEE CDC 2018
 
-\item [(C10)] \textbf{R.Eletreby}, Y.Zhuang and O.Ya\u{g}an \textit{``Evolution of Spreading Processes on Complex Networks"} - Conference on Complex Systems 2018
+\resumeItemInfo{(J3)}{\textbf{R.Eletreby} and O.Ya\u{g}an \textit{``$k$-connectivity of Inhomogeneous Random Key Graphs with Unreliable Links"} - published in IEEE Transactions on Information Theory}
 
-\item [(C9)] \textbf{R.Eletreby}, Y.Zhuang and O.Ya\u{g}an \textit{``Evolution of Spreading Processes on Complex Networks"} - IEEE ITA 2018 - Invited Abstract
+\resumeItemInfo{(J2)}{\textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Connectivity of Wireless Sensor Networks Secured by Heterogeneous Key Predistribution Under an On/Off Channel Model"} - published in IEEE Transactions on Control of Network Systems}
 
-\item [(C8)] \textbf{R.Eletreby}, D.Zhang, S.Kumar and O.Ya\u{g}an \textit{``Empowering Low-Power Wide Area Networks in Urban Settings"} - ACM SIGCOMM 2017
 
-\item [(C7)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Secure and Reliable Connectivity in Heterogeneous Wireless Sensor Networks"} - IEEE ISIT 2017
+\resumeItemInfo{(J1)}{\textbf{R.Eletreby}, H.Elsayed and M.Khairy \textit{``Optimal Spectrum Assignment for Cognitive Radio Sensor Networks Under Coverage Constraint"} - published in IET Communications Journal}
 
-\item [(C6)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Connectivity of Inhomogeneous Random Key Graphs Intersecting Inhomogeneous Erd\H{o}s-R\'enyi Graphs"} - IEEE ISIT 2017
+\resumeItemListEnd
 
-\item [(C5)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Reliability of Wireless Sensor Networks under a Heterogeneous Key Predistribution Scheme"} - IEEE CDC 2016
 
-\item [(C4)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Performance of the Heterogeneous Key Predistribution Scheme under a Heterogeneous ON-OFF Channel Model"} - Allerton 2016
 
-\item [(C3)] \textbf{R.Eletreby} and O.Ya\u{g}an \textit{`` Minimum Node Degree in Inhomogeneous Random Key Graphs With Unreliable Links"} - IEEE ISIT 2016
+\subsubsection*{\quad \large Conference Papers}
+\resumeItemListStart
+\resumeItemInfo{(C12)}{\textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Connectivity of Inhomogeneous Random $K$-out Graphs"} - IEEE ISIT 2019}
 
-\item [(C2)] \textbf{R.Eletreby}, H.Rahbari, M.Krunz \textit{``Supporting PHY-layer Security in Multi-link Wireless Networks Using Friendly Jamming"} - IEEE GLOBECOM 2015.
+\resumeItemInfo{(C11)}{\textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Connectivity of Wireless Sensor Networks Secured by The Heterogeneous Random Pairwise Key Predistribution Scheme"} - IEEE CDC 2018}
 
-\item [(C1)] \textbf{R.Eletreby}, H.Elsayed and M.Khairy \textit{``CogLEACH: A Spectrum-Aware Clustering Protocol for Cognitive Radio Sensor Networks"} - CROWNCOM 2014.
-\end{itemize}
+
+\resumeItemInfo{(C10)}{\textbf{R.Eletreby}, Y.Zhuang and O.Ya\u{g}an \textit{``Evolution of Spreading Processes on Complex Networks"} - Conference on Complex Systems 2018}
+
+
+\resumeItemInfo{(C9)}{\textbf{R.Eletreby}, Y.Zhuang and O.Ya\u{g}an \textit{``Evolution of Spreading Processes on Complex Networks"} - IEEE ITA 2018 - Invited Abstract}
+
+
+\resumeItemInfo{(C8)}{\textbf{R.Eletreby}, D.Zhang, S.Kumar and O.Ya\u{g}an \textit{``Empowering Low-Power Wide Area Networks in Urban Settings"} - ACM SIGCOMM 2017}
+
+
+\resumeItemInfo{(C7)}{\textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Secure and Reliable Connectivity in Heterogeneous Wireless Sensor Networks"} - IEEE ISIT 2017}
+
+
+\resumeItemInfo{(C6)}{\textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Connectivity of Inhomogeneous Random Key Graphs Intersecting Inhomogeneous Erd\H{o}s-R\'enyi Graphs"} - IEEE ISIT 2017}
+
+
+\resumeItemInfo{(C5)}{\textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Reliability of Wireless Sensor Networks under a Heterogeneous Key Predistribution Scheme"} - IEEE CDC 2016}
+
+
+\resumeItemInfo{(C4)}{\textbf{R.Eletreby} and O.Ya\u{g}an \textit{``Performance of the Heterogeneous Key Predistribution Scheme under a Heterogeneous ON-OFF Channel Model"} - Allerton 2016}
+
+
+\resumeItemInfo{(C3)}{\textbf{R.Eletreby} and O.Ya\u{g}an \textit{`` Minimum Node Degree in Inhomogeneous Random Key Graphs With Unreliable Links"} - IEEE ISIT 2016}
+
+
+\resumeItemInfo{(C2)}{ \textbf{R.Eletreby}, H.Rahbari, M.Krunz \textit{``Supporting PHY-layer Security in Multi-link Wireless Networks Using Friendly Jamming"} - IEEE GLOBECOM 2015}
+
+
+\resumeItemInfo{(C1)}{\textbf{R.Eletreby}, H.Elsayed and M.Khairy \textit{``CogLEACH: A Spectrum-Aware Clustering Protocol for Cognitive Radio Sensor Networks"} - CROWNCOM 2014}
+
+\resumeItemListEnd
+
 
 
 %-------------------------------------------
